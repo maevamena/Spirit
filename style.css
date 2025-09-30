@@ -1,0 +1,113 @@
+body {
+  font-family: 'Comic Sans MS', cursive, sans-serif;
+  text-align: center;
+  background: linear-gradient(to bottom, #dff6ff, #fff);
+  padding: 50px;
+  overflow: hidden;
+  position: relative;
+}
+
+h1 {
+  color: #c0392b;
+  text-shadow: 2px 2px #fff;
+}
+
+#meterContainer {
+  width: 300px;
+  height: 40px;
+  border-radius: 20px;
+  background-color: #f2f2f2;
+  overflow: hidden;
+  margin: 20px auto;
+  position: relative;
+  border: 3px solid #8e44ad;
+}
+
+#meterFill {
+  height: 100%;
+  width: 50%;
+  background: linear-gradient(90deg, #e74c3c, #27ae60);
+  transition: width 0.3s ease, background 0.3s ease;
+}
+
+#meterIcons {
+  position: absolute;
+  width: 100%;
+  flex-direction: row;
+  display: flex;
+  justify-content: space-between;
+  top: 0;
+  padding: 0 10px;
+}
+
+#meterIcons span {
+  font-size: 24px;
+}
+
+#meterValue {
+  font-size: 20px;
+  margin-top: 10px;
+  font-weight: bold;
+  color: #34495e;
+}
+
+#givingMeter {
+  font-size: 18px;
+  margin-top: 5px;
+  font-weight: bold;
+  color: #2c3e50;
+}
+
+/* Buttons */
+button {
+  margin: 10px;
+  padding: 12px 24px;
+  font-size: 18px;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  box-shadow: 2px 2px 5px rgba(0,0,0,0.2);
+}
+
+.goodBtn {
+  background-color: #27ae60;
+  color: white;
+}
+
+.badBtn {
+  background-color: #c0392b;
+  color: white;
+}
+
+/* Snowflakes */
+.snowflake {
+  position: fixed;
+  top: -10px;
+  font-size: 1em;
+  color: #fff;
+  user-select: none;
+  pointer-events: none;
+  animation-name: fall;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+}
+
+@keyframes fall {
+  to { transform: translateY(100vh); }
+}
+
+/* Floating gifts/hearts for high spirit */
+.floating {
+  position: fixed;
+  top: -30px;
+  font-size: 24px;
+  pointer-events: none;
+  user-select: none;
+  animation-name: floatUp;
+  animation-timing-function: linear;
+  animation-iteration-count: 1;
+}
+
+@keyframes floatUp {
+  to { transform: translateY(100vh) translateX(30px); opacity: 0; }
+}
