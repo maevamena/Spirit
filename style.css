@@ -111,3 +111,10 @@ button {
 @keyframes floatUp {
   to { transform: translateY(100vh) translateX(30px); opacity: 0; }
 }
+
+#buttonContainer {
+  display: flex;
+  justify-content: space-between; /* Bad Event left, Good Event right */
+  width: 300px; /* match meter width */
+  margin: 20px auto; /* center container */
+}
