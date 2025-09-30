@@ -19,13 +19,10 @@
   <p id="meterValue">Spirit: 50%</p>
   <p id="givingMeter">🙂 Some joy and laughter… giving is possible!</p>
 
- 
-#buttonContainer {
-  display: flex;
-  justify-content: space-between; /* Bad Event left, Good Event right */
-  width: max-content;
-  margin: 20px auto;
-}
+  <div id="buttonContainer">
+    <button class="badBtn" onclick="changeSpirit(-10)">Bad Event –</button>
+    <button class="goodBtn" onclick="changeSpirit(10)">Good Event +</button>
+  </div>
 
   <script src="script.js"></script>
 </body>
