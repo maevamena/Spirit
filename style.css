@@ -1,77 +1,8 @@
-/* Global */
-* {
-  box-sizing: border-box;
-}
-
-body {
-  font-family: 'Comic Sans MS', cursive, sans-serif;
-  text-align: center;
-  background: linear-gradient(to bottom, #dff6ff, #fff);
-  padding: 50px;
-  overflow: hidden;
-  position: relative;
-}
-
-h1 {
-  color: #c0392b;
-  text-shadow: 2px 2px #fff;
-}
-
-/* Meter Container */
-#meterContainer {
-  width: 300px;
-  height: 40px;
-  border-radius: 20px;
-  background-color: #f2f2f2;
-  overflow: hidden;
-  margin: 20px auto;
-  position: relative;
-  border: 3px solid #8e44ad;
-}
-
-#meterFill {
-  height: 100%;
-  width: 50%;
-  background: linear-gradient(90deg, #e74c3c, #27ae60);
-  transition: width 0.3s ease, background 0.3s ease;
-}
-
-/* Meter Icons */
-#meterIcons {
-  position: absolute;
-  top: 0;
-  width: 100%;
-  display: flex;
-  justify-content: space-between;
-  padding: 0 10px;
-}
-
-#meterIcons img {
-  width: 40px;
-  height: auto;
-}
-
-/* Meter Text */
-#meterValue {
-  font-size: 20px;
-  margin-top: 10px;
-  font-weight: bold;
-  color: #34495e;
-}
-
-#givingMeter {
-  font-size: 18px;
-  margin-top: 5px;
-  font-weight: bold;
-  color: #2c3e50;
-}
-
-/* Buttons */
 #buttonContainer {
   display: flex;
   justify-content: space-between; /* Bad Event left, Good Event right */
-  width: max-content;
-  margin: 20px auto;
+  width: 300px; /* same as meter width */
+  margin: 20px auto; /* center container */
 }
 
 button {
@@ -92,37 +23,4 @@ button {
 .badBtn {
   background-color: #c0392b;
   color: white;
-}
-
-/* Snowflakes */
-.snowflake {
-  position: fixed;
-  top: -10px;
-  font-size: 1em;
-  color: #fff;
-  user-select: none;
-  pointer-events: none;
-  animation-name: fall;
-  animation-timing-function: linear;
-  animation-iteration-count: infinite;
-}
-
-@keyframes fall {
-  to { transform: translateY(100vh); }
-}
-
-/* Floating gifts/hearts for high spirit */
-.floating {
-  position: fixed;
-  top: -30px;
-  font-size: 24px;
-  pointer-events: none;
-  user-select: none;
-  animation-name: floatUp;
-  animation-timing-function: linear;
-  animation-iteration-count: 1;
-}
-
-@keyframes floatUp {
-  to { transform: translateY(100vh) translateX(30px); opacity: 0; }
 }
